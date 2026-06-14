@@ -1,0 +1,15 @@
+{
+    "members": [{
+            "username": "admin1",
+            "password_hash": "adminpass",
+            "role": "admin"
+        },
+        {
+            "username": "member1",
+            "password_hash": "memberpass",
+            "role": "member",
+            "borrowed_isbns": []
+        }],
+    "books": [],
+    "borrows": []
+}
