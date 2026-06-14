@@ -3,21 +3,16 @@ from library_management import database
 from library_management.models import Member, Admin
 
 def hash_password(password):
-    """Convert plain text password to a secure hash."""
     password_bytes = password.encode("utf-8")
     hashed = bcrypt.hashpw(password_bytes, bcrypt.gensalt())
     return hashed.decode("utf-8")
 
-
 def verify_password(plain_password, stored_hash):
-    """Check if a plain text password matches the stored hash."""
     password_bytes = plain_password.encode("utf-8")
     hash_bytes = stored_hash.encode("utf-8")
     return bcrypt.checkpw(password_bytes, hash_bytes)
 
-
 def register(username, password):
-    """Register a new member account."""
     db_data = database.load_raw_data()
     existing_users = db_data["members"]
     for user in existing_users:
@@ -31,9 +26,7 @@ def register(username, password):
     print(f"Account created successfully! Welcome, {username}.")
     return True
 
-
 def login(username, password):
-    """Login an existing user and return the correct object."""
     db_data = database.load_raw_data()
     user_dict = next((u for u in db_data["members"]
                       if u["username"] == username), None)
@@ -51,9 +44,7 @@ def login(username, password):
         return Member.from_dict(user_dict)
     return None
 
-
 def admin_required(func):
-    """Decorator that blocks non-admin users from calling a function."""
     def wrapper(user, *args, **kwargs):
         if user.role != "admin":
             print("Access denied. Admins only.")
