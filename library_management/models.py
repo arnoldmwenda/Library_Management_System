@@ -14,7 +14,7 @@ class User:
 
     @classmethod
     def from_dict(cls, data):
-        return cls(data["username"], data["password_hash"], data["roles"])
+        return cls(data["username"], data["password_hash"])
 
 
 class Admin(User):
@@ -51,7 +51,7 @@ class Member(User):
 
     @classmethod
     def from_dict(cls, data):
-        return cls(data["username"], data["password_hash"], data["borrowed_isbns"])
+        return cls(data["username"], data["password_hash"])
 
 
 class Book:

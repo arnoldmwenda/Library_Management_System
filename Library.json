@@ -1,15 +1,23 @@
 {
-    "members": [{
+    "members": [
+        {
             "username": "admin1",
-            "password_hash": "adminpass",
+            "password_hash": "$2b$12$NJkXhqNSx38uJ76nbPhTvuV8fGm8V5R064qHPeZ7jQMrFA3OZ2T6i",
             "role": "admin"
         },
         {
             "username": "member1",
-            "password_hash": "memberpass",
+            "password_hash": "$2b$12$skZ3jPsVwxM289x2Bmti0Ox9F/xay122gybHmePzrshbEzu3spFLq",
             "role": "member",
             "borrowed_isbns": []
-        }],
+        },
+        {
+            "username": "bryton",
+            "password_hash": "$2b$12$/E4T3dQXXqooXK7P04BYHeEtsLJdaC4FdkZ5MTK/fnKZShG/x04qm",
+            "role": "member",
+            "borrowed_isbns": []
+        }
+    ],
     "books": [],
     "borrows": []
 }
