@@ -1,30 +1,4 @@
-from library_management import database, Admin, Member
 
-def authenticate_user():
-    print("\n=== WELCOME TO THE LIBRARY ===")
-    username = input("Username: ").strip()
-    password = input("Password: ").strip()
-
-    db_data = database.load_raw_data()
-    
-    user_dict = next((u for u in db_data["members"] if u["username"] == username), None)
-    
-    if not user_dict:
-        print("Username not found.")
-        return None
-
-    if user_dict["password_hash"] != password:
-        print("Incorrect password.")
-        return None
-
-    if user_dict["role"] == "admin":
-        print(f"\nWelcome back, Admin {username}!")
-        return Admin.from_dict(user_dict)
-    elif user_dict["role"] == "member":
-        print(f"\nWelcome back, Member {username}!")
-        return Member.from_dict(user_dict)
-        
-    return None
 
 def show_admin_menu(admin_user):
     while True:
@@ -68,20 +42,7 @@ def show_member_menu(member_user):
             print("Invalid choice, try again.")
 
 def main():
-    current_user = None
-    
-    while True:
-        if current_user is None:
-            current_user = authenticate_user()
-            continue 
-            
-        if current_user.role == "admin":
-            show_admin_menu(current_user)
-            current_user = None
-            
-        elif current_user.role == "member":
-            show_member_menu(current_user)
-            current_user = None 
+    return
 
 if __name__ == "__main__":
     main()
