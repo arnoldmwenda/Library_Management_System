@@ -14,7 +14,7 @@ class User:
 
     @classmethod
     def from_dict(cls, data):
-        return cls(data["username"], data["password_hash"])
+        return cls(data["username"], data["password_hash"], data["roles"])
 
 
 class Admin(User):
