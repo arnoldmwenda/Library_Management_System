@@ -1,4 +1,4 @@
-from library_management import database
+from library_management import database, execute_add_book,execute_remove_book,execute_borrow_book,execute_return_book,execute_view_borrowed_books
 from library_management.models import Admin, Member
 from auth import register, login
  
@@ -38,9 +38,9 @@ def show_admin_menu(admin_user):
         choice = input("Select an option (1-3): ").strip()
         
         if choice == "1":
-            print("\n[Feature coming soon: Add Book Logic]")
+            execute_add_book()
         elif choice == "2":
-            print("\n[Feature coming soon: Remove Book Logic]")
+            execute_remove_book()
         elif choice == "3":
             print("Logging out...")
             break
@@ -58,11 +58,11 @@ def show_member_menu(member_user):
         choice = input("Select an option (1-4): ").strip()
         
         if choice == "1":
-            print("\n[Feature coming soon: Borrow Book Logic]")
+            execute_borrow_book(member_user)
         elif choice == "2":
-            print("\n[Feature coming soon: Return Book Logic]")
+            execute_return_book(member_user)
         elif choice == "3":
-            print(f"\nYour borrowed ISBNs: {member_user.get_borrowed_books()}")
+           execute_view_borrowed_books(member_user)
         elif choice == "4":
             print("Logging out...")
             break
