@@ -16,8 +16,34 @@
             "password_hash": "$2b$12$/E4T3dQXXqooXK7P04BYHeEtsLJdaC4FdkZ5MTK/fnKZShG/x04qm",
             "role": "member",
             "borrowed_isbns": []
+        },
+        {
+            "username": "brian",
+            "password_hash": "$2b$12$q8eDNptO4mf1efiQ7eYktO1dMTnWwuXXi5mtvbON7DMPQiEyGS7xe",
+            "role": "member",
+            "borrowed_isbns": []
         }
     ],
-    "books": [],
-    "borrows": []
+    "books": [
+        {
+            "title": "The Hobbit",
+            "author": "J.R.R. Tolkien",
+            "isbn": "9780261103344",
+            "available_copies": 3
+        },
+        {
+            "title": "Harry Potter and the sorcerer's stone",
+            "author": "J. K. Rowling",
+            "isbn": "9780439708180",
+            "available_copies": 3
+        }
+    ],
+    "borrows": [
+        {
+            "username": "brian",
+            "isbn": "9780261103344",
+            "borrow_date": "2026-06-15",
+            "return_date": "2026-06-15"
+        }
+    ]
 }
