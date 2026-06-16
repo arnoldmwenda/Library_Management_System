@@ -6,10 +6,10 @@ A modular, command-line interface (CLI) Library Management System built with Pyt
 
 ## Key Features
 
-* **Role-Based Access Control:** 
-* **Object-Oriented Integrity:** 
-* **Automated Data Persistence:** 
-* **Comprehensive Transaction Logging:** 
+* **Role-Based Access Control** 
+* **Object-Oriented Integrity** 
+* **Automated Data Persistence** 
+* **Comprehensive Transaction Logging** 
 
 ---
 
