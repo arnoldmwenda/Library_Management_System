@@ -112,4 +112,6 @@ git commit -m "Update system configuration profile dependencies"
 git push origin <your-feature-branch>
 
 ```
+## Video explanation
+https://www.loom.com/spaces/All-arnoldbrytonbrianbravelcecilia-46113726
 
